@@ -1,0 +1,48 @@
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  background-color: #fff;
+  color: #333;
+}
+
+.Modal .modal-header {
+  background-color: rgb(95, 95, 223);
+  width: 100%;
+  padding: 25px 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.Modal .modal-header h3 {
+  font-size: 3rem;
+  color: #fff;
+  padding: 0px 15px;
+}
+
+.Modal .modal-body {
+  background-color: #fff;
+  width: 100%;
+  padding: 15px;
+}
+
+.Modal .modal-body p {
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  padding: 15px 0px 25px;
+}
+
+.Modal .modal-body button {
+  padding: 12px 24px;
+  background-color: rgb(95, 95, 223);
+  font-size: 1.8rem;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  margin: 10px 0px 25px;
+  float: right;
+  cursor: pointer;
+}

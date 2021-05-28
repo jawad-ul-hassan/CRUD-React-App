@@ -1,0 +1,13 @@
+.user-card {
+  width: 100%;
+  padding: 5px 12px;
+  border: 2px solid #d8d8d8;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.user-card p {
+  font-size: 1.7rem;
+  text-align: center;
+}
