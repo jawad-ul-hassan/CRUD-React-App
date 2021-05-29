@@ -23,6 +23,11 @@ const App = () => {
     setAgeChecker(check);
   };
 
+  const deleteHandler = index => {
+    const updatedInfo = userInfo.filter((user, ind) => ind !== index);
+    setUserInfo(updatedInfo);
+  };
+
   return (
     <div className={styles.app}>
       <h1>Enter Your Name & Age</h1>
@@ -37,7 +42,11 @@ const App = () => {
         modalOpenHandler={modalOpen}
         ageChecker={theAgeChecker}
       />
-      <UserCardList userData={userInfo} setUserInfo={setUserInfo} />
+      <UserCardList
+        userData={userInfo}
+        setUserInfo={setUserInfo}
+        deleteHandler={deleteHandler}
+      />
     </div>
   );
 };
