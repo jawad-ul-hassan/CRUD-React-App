@@ -1,14 +1,15 @@
 .app {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1960px;
 }
 
 .app h1 {
   font-size: 3.7rem;
+  margin-top: 15px;
 }
 
 @media (max-width: 695px) {

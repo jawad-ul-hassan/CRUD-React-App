@@ -2,6 +2,7 @@
   background-color: #fff;
   color: #333;
   width: 680px;
+  margin-bottom: 25px;
   padding: 25px 15px 15px;
   border-radius: 5px;
 }
@@ -27,7 +28,7 @@
 
 @media (max-width: 475px) {
   .user-card-list {
-    width: 100%;
+    width: 314px;
   }
 
   .user-card-list span {
