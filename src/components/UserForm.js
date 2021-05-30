@@ -8,7 +8,7 @@ const UserForm = props => {
   const userDataHandler = e => {
     e.preventDefault();
 
-    if (name.trim().length === 0 && age.trim().length === 0) {
+    if (name.trim().length === 0 || age.trim().length === 0) {
       props.modalOpenHandler(true);
     } else if (age <= 0) {
       props.modalOpenHandler(true);
