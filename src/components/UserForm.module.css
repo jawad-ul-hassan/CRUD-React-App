@@ -2,7 +2,7 @@
   background-color: #fff;
   color: #333;
   width: 680px;
-  padding: 10px 0px 25px;
+  padding: 25px 0px;
   margin: 25px 0px 35px;
   border-radius: 5px;
 }
@@ -35,7 +35,7 @@
 }
 
 .user-form .user-btn {
-  padding: 10px 14px;
+  padding: 10px 12px;
   text-align: center;
   color: #fff;
   background-color: rgb(95, 95, 223);
