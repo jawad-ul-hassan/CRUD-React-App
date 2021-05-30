@@ -12,3 +12,25 @@
   font-weight: 600;
   text-align: center;
 }
+
+@media (max-width: 695px) {
+  .user-card-list {
+    width: 550px;
+  }
+}
+
+@media (max-width: 555px) {
+  .user-card-list {
+    width: 450px;
+  }
+}
+
+@media (max-width: 475px) {
+  .user-card-list {
+    width: 100%;
+  }
+
+  .user-card-list span {
+    font-size: 1.5rem;
+  }
+}

@@ -46,3 +46,47 @@
   float: right;
   cursor: pointer;
 }
+
+@media (max-width: 750px) {
+  .Modal {
+    width: 90%;
+  }
+  .Modal .modal-header h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 535px) {
+  .Modal .modal-body {
+    background-color: #fff;
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+  .Modal .modal-body p {
+    font-size: 1.7rem;
+    padding: 12px 0px 22px;
+  }
+
+  .Modal .modal-body button {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .Modal .modal-header {
+    padding: 15px 0px;
+  }
+  .Modal .modal-header h3 {
+    font-size: 2.2rem;
+  }
+  .Modal .modal-body p {
+    font-size: 1.5rem;
+    padding: 10px 0px 12px;
+  }
+
+  .Modal .modal-body button {
+    padding: 12px 20px;
+    font-size: 1.6rem;
+  }
+}

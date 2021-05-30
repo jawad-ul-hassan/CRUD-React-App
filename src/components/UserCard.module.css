@@ -32,3 +32,19 @@
   width: 85px;
   font-size: 1.6rem;
 }
+
+@media (max-width: 475px) {
+  .user-card p span {
+    font-size: 1.5rem;
+  }
+
+  .user-card p {
+    font-size: 1.5rem;
+  }
+
+  .user-card button {
+    padding: 8.5px 12px;
+    width: 75px;
+    font-size: 1.5rem;
+  }
+}

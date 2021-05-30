@@ -45,3 +45,47 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media (max-width: 695px) {
+  .user-form {
+    width: 550px;
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 555px) {
+  .user-form {
+    width: 450px;
+    margin: 20px 0px 30px;
+  }
+
+  .user-form .form-control {
+    padding: 10px 25px 5px;
+  }
+}
+
+@media (max-width: 475px) {
+  .user-form {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 15px 0px 25px;
+  }
+
+  .user-form .form-control {
+    padding: 10px 15px 5px;
+  }
+
+  .user-form .form-control input {
+    font-size: 1.7rem;
+    padding: 5px 12px;
+  }
+
+  .user-form .form-control label {
+    font-size: 1.7rem;
+  }
+
+  .user-form .user-btn {
+    width: 115px;
+    font-size: 1.7rem;
+  }
+}
