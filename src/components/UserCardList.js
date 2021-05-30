@@ -3,14 +3,14 @@ import UserCard from './UserCard';
 import styles from './UserCardList.module.css';
 
 const UserCardList = props => {
-  const userCardList = props.userData.map((user, index, userInfo) => {
+  const userCardList = props.userData.map((user, index) => {
     return (
       <UserCard
         key={index}
         name={user.name}
         age={user.age}
-        userInfo={userInfo}
-        setUserInfo={props.setUserInfo}
+        deleteHandler={props.deleteHandler}
+        id={index}
       />
     );
   });
