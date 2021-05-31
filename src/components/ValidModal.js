@@ -20,7 +20,7 @@ const ValidModal = props => {
         }}
       >
         <div className={styles['modal-header']}>
-          <h3>Invalid Input</h3>
+          {!props.ageChecker ? <h3>Invalid Age</h3> : <h3>Invalid Input</h3>}
         </div>
         <div className={styles['modal-body']}>
           {!props.ageChecker ? (

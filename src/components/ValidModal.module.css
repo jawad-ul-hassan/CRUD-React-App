@@ -11,7 +11,7 @@
 .Modal .modal-header {
   background-color: rgb(95, 95, 223);
   width: 100%;
-  padding: 25px 0px;
+  padding: 15px 0px;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -24,7 +24,7 @@
 .Modal .modal-body {
   background-color: #fff;
   width: 100%;
-  padding: 15px;
+  padding: 5px 15px;
 }
 
 .Modal .modal-body p {
@@ -60,7 +60,6 @@
   .Modal .modal-body {
     background-color: #fff;
     width: 100%;
-    padding: 12px 10px;
   }
 
   .Modal .modal-body p {
@@ -74,9 +73,6 @@
 }
 
 @media (max-width: 485px) {
-  .Modal .modal-header {
-    padding: 15px 0px;
-  }
   .Modal .modal-header h3 {
     font-size: 2.2rem;
   }

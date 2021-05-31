@@ -1,6 +1,6 @@
 .user-card {
   width: 100%;
-  padding: 8px 12px;
+  padding: 8px;
   border: 2px solid #d8d8d8;
   background-color: #fff;
   border-radius: 2px;
@@ -25,12 +25,22 @@
 .user-card button {
   padding: 10px 15px;
   color: #fff;
-  background-color: rgb(197, 36, 36);
   border: 0;
+  width: 100px;
   cursor: pointer;
   border-radius: 5px;
-  width: 85px;
   font-size: 1.6rem;
+  text-align: center;
+}
+
+.edit-btn {
+  background-color: rgb(94, 156, 33);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: rgb(212, 36, 36);
 }
 
 @media (max-width: 475px) {
@@ -43,8 +53,10 @@
   }
 
   .user-card button {
-    padding: 8.5px 12px;
-    width: 75px;
+    width: 65px;
+    flex-basis: 65px;
+    padding: 10px 12px;
     font-size: 1.5rem;
+    text-align: center;
   }
 }

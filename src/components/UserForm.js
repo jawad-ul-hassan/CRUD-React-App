@@ -16,10 +16,9 @@ const UserForm = props => {
     } else {
       props.modalOpenHandler(false);
       props.userInputInfo(name, Number(age));
+      setname('');
+      setAge('');
     }
-
-    setname('');
-    setAge('');
   };
 
   const nameInputHandler = e => {
