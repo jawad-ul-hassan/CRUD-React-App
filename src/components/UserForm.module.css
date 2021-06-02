@@ -113,4 +113,11 @@
     width: 100%;
     font-size: 1.7rem;
   }
+
+  .user-form .update-btn {
+    width: 100%;
+    font-size: 1.7rem;
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
