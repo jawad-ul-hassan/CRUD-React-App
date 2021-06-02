@@ -30,7 +30,7 @@ const UserForm = props => {
   };
 
   const formComponent = (
-    <form onSubmit={userDataHandler} className={styles['user-form']}>
+    <form className={styles['user-form']}>
       <div className={styles['form-control']}>
         <label>Name</label>
         <input type="text" value={name} onChange={nameInputHandler} />
@@ -40,7 +40,16 @@ const UserForm = props => {
         <input type="number" value={age} onChange={ageInputHandler} />
       </div>
       <div className={styles['form-control']}>
-        <button className={styles['user-btn']}>Add User</button>
+        <button
+          className={styles['user-btn']}
+          onClick={userDataHandler}
+          disabled={props.isEdit}
+        >
+          Add User
+        </button>
+        <button className={styles['update-btn']} disabled={!props.isEdit}>
+          Update User
+        </button>
       </div>
     </form>
   );

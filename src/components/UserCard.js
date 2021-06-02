@@ -6,6 +6,11 @@ const UserCard = props => {
     props.deleteHandler(props.id);
   };
 
+  const editCard = () => {
+    props.setEdit(true);
+    props.updateUser(props.id);
+  };
+
   return (
     <div className={styles['user-card']}>
       <p>
@@ -14,7 +19,9 @@ const UserCard = props => {
         <span>Age:</span> {props.age}
       </p>
       <div>
-        <button className={styles['edit-btn']}>Edit</button>
+        <button className={styles['edit-btn']} onClick={editCard}>
+          Edit
+        </button>
         <button className={styles['delete-btn']} onClick={deleteCard}>
           Delete
         </button>

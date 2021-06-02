@@ -6,10 +6,26 @@ import ValidModal from './components/ValidModal';
 
 const App = () => {
   const [userInfo, setUserInfo] = useState([]);
+  const [isEdit, setEdit] = useState(false);
 
   const newUserData = (name, age) => {
     const newUser = { name, age };
     setUserInfo([...userInfo, newUser]);
+  };
+
+  const updateUser = userId => {
+    const updatedList = userInfo.map((user, index) => {
+      if (index === userId) {
+        const updateUser = {
+          name: 'Donald',
+          age: 75,
+        };
+        return updateUser;
+      }
+      return user;
+    });
+    console.log(updatedList);
+    return updatedList;
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -41,11 +57,14 @@ const App = () => {
         userInputInfo={newUserData}
         modalOpenHandler={modalOpen}
         ageChecker={theAgeChecker}
+        isEdit={isEdit}
       />
       <UserCardList
         userData={userInfo}
         setUserInfo={setUserInfo}
         deleteHandler={deleteHandler}
+        setEdit={setEdit}
+        updateUser={updateUser}
       />
     </div>
   );

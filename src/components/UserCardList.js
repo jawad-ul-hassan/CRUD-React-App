@@ -11,6 +11,8 @@ const UserCardList = props => {
         age={user.age}
         deleteHandler={props.deleteHandler}
         id={index}
+        setEdit={props.setEdit}
+        updateUser={props.updateUser}
       />
     );
   });
