@@ -8,7 +8,7 @@ const UserCard = props => {
 
   const editCard = () => {
     props.setEdit(true);
-    props.updateUser(props.id);
+    props.userToBeUpdated(props.id);
   };
 
   return (

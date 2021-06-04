@@ -12,7 +12,7 @@ const UserCardList = props => {
         deleteHandler={props.deleteHandler}
         id={index}
         setEdit={props.setEdit}
-        updateUser={props.updateUser}
+        userToBeUpdated={props.userToBeUpdated}
       />
     );
   });

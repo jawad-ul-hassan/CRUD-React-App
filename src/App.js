@@ -7,26 +7,42 @@ import ValidModal from './components/ValidModal';
 const App = () => {
   const [userInfo, setUserInfo] = useState([]);
   const [isEdit, setEdit] = useState(false);
+  const [userUpdate, setUserUpdate] = useState({});
 
   const newUserData = (name, age) => {
     const newUser = { name, age };
     setUserInfo([...userInfo, newUser]);
   };
 
-  const updateUser = userId => {
-    const updatedList = userInfo.map((user, index) => {
+  const userToBeUpdated = userId => {
+    const updatedBnda = userInfo.find((user, index) => {
       if (index === userId) {
-        const updateUser = {
-          name: 'Donald',
-          age: 75,
+        const updUser = {
+          name: user.name,
+          age: user.age,
         };
-        return updateUser;
+        return updUser;
       }
-      return user;
+      return null;
     });
-    console.log(updatedList);
-    return updatedList;
+
+    setUserUpdate(updatedBnda);
   };
+
+  // const updateUser = userId => {
+  //   const updatedList = userInfo.map((user, index) => {
+  //     if (index === userId) {
+  //       const updateUser = {
+  //         name: 'Donald',
+  //         age: 75,
+  //       };
+  //       return updateUser;
+  //     }
+  //     return user;
+  //   });
+  //   console.log(updatedList);
+  //   return updatedList;
+  // };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [ageChecker, setAgeChecker] = useState(true);
@@ -58,13 +74,17 @@ const App = () => {
         modalOpenHandler={modalOpen}
         ageChecker={theAgeChecker}
         isEdit={isEdit}
+        setEdit={setEdit}
+        userInfo={userInfo}
+        setUserInfo={setUserInfo}
+        userUpdate={userUpdate}
       />
       <UserCardList
         userData={userInfo}
         setUserInfo={setUserInfo}
         deleteHandler={deleteHandler}
         setEdit={setEdit}
-        updateUser={updateUser}
+        userToBeUpdated={userToBeUpdated}
       />
     </div>
   );

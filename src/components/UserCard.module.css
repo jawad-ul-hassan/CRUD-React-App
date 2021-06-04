@@ -45,6 +45,7 @@
   background-color: rgb(94, 156, 33);
   display: inline-block;
   margin-right: 10px;
+  letter-spacing: 1.2px;
 }
 
 .delete-btn {
