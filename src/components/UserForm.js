@@ -1,10 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../components/UserForm.module.css';
 
 const UserForm = props => {
   const [name, setname] = useState('');
   const [age, setAge] = useState('');
-  const nameRef = useRef();
 
   useEffect(() => {
     if (props.isEdit) {
@@ -83,17 +82,7 @@ const UserForm = props => {
     <form className={styles['user-form']}>
       <div className={styles['form-control']}>
         <label>Name</label>
-        {!props.isEdit ? (
-          <input type="text" value={name} onChange={nameInputHandler} />
-        ) : (
-          <input
-            type="text"
-            value={name}
-            onChange={nameInputHandler}
-            ref={nameRef}
-            autoFocus
-          />
-        )}
+        <input type="text" value={name} onChange={nameInputHandler} />
       </div>
       <div className={styles['form-control']}>
         <label>Age</label>
