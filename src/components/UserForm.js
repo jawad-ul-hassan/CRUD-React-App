@@ -39,7 +39,7 @@ const UserForm = props => {
 
   const updateUser = e => {
     e.preventDefault();
-    console.log(typeof age);
+
     if (name.trim().length === 0 || age === 0) {
       props.modalOpenHandler(true);
     } else if (age <= 0) {
