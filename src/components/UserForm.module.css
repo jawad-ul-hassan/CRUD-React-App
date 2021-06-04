@@ -71,6 +71,13 @@
   cursor: not-allowed;
 }
 
+.user-form .form-control-btn {
+  padding: 15px 35px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 695px) {
   .user-form {
     width: 550px;

@@ -29,21 +29,6 @@ const App = () => {
     setUserUpdate(updatedBnda);
   };
 
-  // const updateUser = userId => {
-  //   const updatedList = userInfo.map((user, index) => {
-  //     if (index === userId) {
-  //       const updateUser = {
-  //         name: 'Donald',
-  //         age: 75,
-  //       };
-  //       return updateUser;
-  //     }
-  //     return user;
-  //   });
-  //   console.log(updatedList);
-  //   return updatedList;
-  // };
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [ageChecker, setAgeChecker] = useState(true);
 

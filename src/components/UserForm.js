@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import styles from '../components/UserForm.module.css';
 
 const UserForm = props => {
-  const [name, setname] = useState('');
+  const [name, setName] = useState('');
   const [age, setAge] = useState('');
 
   useEffect(() => {
     if (props.isEdit) {
-      setname(props.userUpdate.name);
+      setName(props.userUpdate.name);
       setAge(props.userUpdate.age);
     } else {
-      setname('');
+      setName('');
       setAge('');
     }
   }, [
-    setname,
+    setName,
     setAge,
     props.userUpdate.name,
     props.userUpdate.age,
@@ -24,7 +24,7 @@ const UserForm = props => {
   const userDataHandler = e => {
     e.preventDefault();
 
-    if (name.trim().length === 0 || age.trim().length === 0) {
+    if (name.trim().length === 0 || age === 0) {
       props.modalOpenHandler(true);
     } else if (age <= 0) {
       props.modalOpenHandler(true);
@@ -32,15 +32,15 @@ const UserForm = props => {
     } else {
       props.modalOpenHandler(false);
       props.userInputInfo(name, Number(age));
-      setname('');
+      setName('');
       setAge('');
     }
   };
 
   const updateUser = e => {
     e.preventDefault();
-
-    if (name.trim().length === 0 || age.trim().length === 0) {
+    console.log(typeof age);
+    if (name.trim().length === 0 || age === 0) {
       props.modalOpenHandler(true);
     } else if (age <= 0) {
       props.modalOpenHandler(true);
@@ -65,13 +65,13 @@ const UserForm = props => {
 
       props.setUserInfo(updatedList);
       props.setEdit(false);
-      setname('');
+      setName('');
       setAge('');
     }
   };
 
   const nameInputHandler = e => {
-    setname(e.target.value);
+    setName(e.target.value);
   };
 
   const ageInputHandler = e => {
@@ -88,7 +88,7 @@ const UserForm = props => {
         <label>Age</label>
         <input type="number" value={age} onChange={ageInputHandler} />
       </div>
-      <div className={styles['form-control']}>
+      <div className={styles['form-control-btn']}>
         <button
           className={styles['user-btn']}
           onClick={userDataHandler}
