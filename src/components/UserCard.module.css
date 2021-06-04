@@ -14,7 +14,7 @@
 
 .user-card:hover {
   cursor: pointer;
-  transform: translateX(4.5px);
+  transform: translateY(-5px);
 }
 
 .user-card p {
@@ -63,8 +63,7 @@
   }
 
   .user-card button {
-    width: 65px;
-    padding: 8px 12px;
+    width: 70px;
     margin-top: 5px;
     font-size: 1.5rem;
     text-align: center;

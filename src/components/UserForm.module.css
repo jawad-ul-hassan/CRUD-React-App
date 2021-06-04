@@ -74,6 +74,7 @@
 .user-form .form-control-btn {
   padding: 15px 35px 5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -116,15 +117,19 @@
     font-size: 1.7rem;
   }
 
+  .user-form .form-control-btn {
+    padding: 10px 15px 5px;
+  }
+
   .user-form .user-btn {
-    width: 100%;
+    width: 75%;
     font-size: 1.7rem;
   }
 
   .user-form .update-btn {
-    width: 100%;
+    width: 75%;
     font-size: 1.7rem;
-    margin-left: 0;
+    margin-left: 0px;
     margin-top: 10px;
   }
 }
